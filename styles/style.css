@@ -1,5 +1,306 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #202225;
+}
+
+
+/* Server List */
+
+nav {
+    background-color: #202225;
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav>ul {
+    margin-left: -1.7em;
+    margin-top: -0.4em;
+}
+
+nav>button {
+    background-color: #36393F;
+    color: #DCDDDE;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: none;
+}
+
+nav>button:nth-of-type(1) {
+    background-image: url("../images/DM.png");
+    background-size: cover;
+    margin: 1em auto 0;
+}
+
+nav>button:nth-of-type(2) {
+    background-image: url("../images/add_server.png");
+    background-size: cover;
+    margin: -0.9em auto 0;
+}
+
+nav>ul>li>a>img {
+    background-color: #36393F;
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 100%;
+}
+
+nav>hr {
+    width: 36px;
+    color: #2D2F31;
+    margin-bottom: 0.8em;
+}
+
+nav>ul:nth-of-type(2) {
+    margin-top: -1em;
+}
+
+nav>ul>li {
+    margin-top: 0.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Channel List */
+
+section:nth-of-type(1) {
+    background-color: #2F3136;
+    width: 15em;
+    /* 240px */
+    color: #8E9297;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+}
+
+section:nth-of-type(1) h2 {
+    color: #fff;
+    font-size: 1em;
+    margin: 1em 0 0 1em;
+}
+
+section:nth-of-type(1)>button {
+    height: 36px;
+    margin: 15px;
+    border-radius: 0.4em;
+    border: none;
+    background-color: #4F545C;
+    color: #fff;
+    font-weight: bold;
+}
+
+section:nth-of-type(1) div {
+    height: 50px;
+    justify-content: space-between;
+}
+
+section:nth-of-type(1) div button:nth-of-type(1) {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    width: 50px;
+    background-image: url("../images/server_settings.png");
+}
+
+div:nth-of-type(1) {
+    display: flex;
+}
+
+
+/* Settings enzo */
+
+aside {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #18191C;
+}
+
+aside>ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+aside>ul>li {
+    height: 100%;
+}
+
+aside>ul>li>button {
+    height: 100%;
+    background-color: transparent;
+    width: 5.4em;
+    border: none;
+}
+
+aside>ul>li:nth-of-type(1)>button {
+    background-image: url("../images/settings_knop_1.png");
+    background-size: cover;
+}
+
+aside>ul>li:nth-of-type(2)>button {
+    background-image: url("../images/settings_knop_2.png");
+    background-size: cover;
+}
+
+aside>ul>li:nth-of-type(3)>button {
+    background-image: url("../images/settings_knop_3.png");
+    background-size: cover;
+}
+
+aside>ul>li:nth-of-type(4)>button {
+    background-image: url("../images/settings_knop_4.png");
+    background-size: cover;
+}
+
+aside>ul>li:nth-of-type(5)>button {
+    background-image: url("../images/settings_knop_5.png");
+    background-size: cover;
+}
+
+main {
+    width: 360px;
+    background-color: #36393F;
+    border-radius: 1em 1em 0 0;
+    margin: 0 10px;
+}
+
+main>div:nth-of-type(1) {
+    height: 50px;
+    background-color: #2F3136;
+    border-radius: 1em 1em 0 0;
+}
+
+main>div:nth-of-type(1) h3 {
+    font-size: 1em;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(1) {
+    border-radius: 1em 0 0 0;
+    border: none;
+    width: 50px;
+    background-color: #2F3136;
+    background-image: url("../images/hamburger.png");
+    background-size: cover;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(2) {
+    border: none;
+    width: 50px;
+    background-color: #2F3136;
+    background-image: url("../images/search.png");
+    background-size: cover;
+    margin-left: 140px;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(3) {
+    border-radius: 0 1em 0 0;
+    border: none;
+    width: 50px;
+    background-color: #2F3136;
+    background-image: url("../images/friends.png");
+    background-size: cover;
+}
+
+main>div:nth-of-type(2) {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+/* Chatbox */
+
+main>div:nth-of-type(2) {
+    visibility: hidden;
+}
+
+main>div:nth-of-type(2)>input {
+    height: 40px;
+    border-radius: 2em;
+    border: none;
+    padding: 0 16px;
+    margin-left: 10px;
+    width: 240px;
+    background-color: #292B2F;
+    color: #DCDDDE;
+}
+
+main>div:nth-of-type(2)>button {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 100%;
+    border: none;
+    background-color: red;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(3) {
+    /* margin-left: 10px; */
+    margin-left: -59px !important;
+}
+
+
+/* Members List */
+
+section:nth-of-type(2) {
+    background-color: #36393F;
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em 1em 0 0;
+}
+
+section:nth-of-type(2)>h3 {
+    margin-left: 20px;
+}
+
+section:nth-of-type(2)>ul:nth-of-type(1) {
+    display: flex;
+    margin-left: -36px;
+}
+
+section:nth-of-type(2)>ul>li {
+    margin-left: 20px;
+}
+
+section:nth-of-type(2)>ul>li>button {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*Js*/
+
+.hideBottomMenu {
+    display: none;
+}
+
+.showChatMenu {
+    visibility: visible !important;
+}
