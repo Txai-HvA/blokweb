@@ -38,11 +38,13 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Het meeste ging best goed en ik heb tot nu toe niet ergens problemen mee gehad. 
 
 **Screenshot(s):**
 
 -screenshot(s) van hoe ver je bent-
+
+![-screenshots week 3-](images/week3_screenshots.png)
 
 ### Agenda voor meeting
 
