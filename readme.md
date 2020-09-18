@@ -1,6 +1,6 @@
 # Procesverslag
 **Auteur:** Txai Pereira de Lacerda
-https://codepen.io/txai-hva
+**Codepen:** https://codepen.io/txai-hva
 
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Nb. de standaardstructuur en de spartaanse opmaak zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
 
@@ -51,8 +51,9 @@ Het meeste ging best goed en ik heb tot nu toe niet ergens problemen mee gehad.
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
-
+**Feedback Bas**
+Bas vond dat ik goed op weg was en dat het een uitdaging is om Discord na te maken.
+Ik heb uitgelegd dat ik de mobiele app namaak, omdat de mobiele website niet goed werkt op mobiel. Verder moet ik opnieuw kijken naar de semantiek van mijn website, aangezien Discord een ongebruikelijk lay-out heeft. Ook zou ik bepaalde buttons kunnen vervangen met linkjes en die kunnen stylen als buttons. Discord Mobile is opgedeeld in tabjes, dus het wordt uitvogelen hoe ik dat ga doen en hoe ik dat responsive maak. 
 
 
 ## Intake (week 1)
