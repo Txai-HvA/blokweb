@@ -14,6 +14,7 @@ function toggleMenu() {
 
     bottomMenu.classList.toggle("hideBottomMenu");
     chatMenu.classList.toggle("showChatMenu");
+    //     body.scroll({ left: 321, behavior: "smooth" });
 
     // count = count + 1;
     // if (isOdd(count)) {

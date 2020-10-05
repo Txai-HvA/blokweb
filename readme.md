@@ -32,8 +32,10 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+![-screenshots week 5-](images/week5_screenshots.png)
 
+Ik had gevraagd of ik als tweede pagina de direct messaging pagina kon gebruiken, aangezien dat nog best leek op de eerste pagina. Aangezien er genoeg verschillen zijn werd die goedgekeurd.
+Ik had een styling probleem bij het server overzicht. In Discord heb je namelijk folders waar je servers in kan slepen. De servers in die folder zaten te hoog en we probeerde dit te fixen, maar dat was niet gelukt. Randy raadde aan flex bij alle relevante elementen uit te zetten. Discord Mobile is opgedeeld in tabjes, dus ik vroeg of Randy misschien een oplossing had. Hij raadde aan viewport te gebruiken hiervoor en transform: translate.
 
 
 ## Voortgang 1 (week 3)
@@ -46,14 +48,7 @@ Het meeste ging best goed en ik heb tot nu toe niet ergens problemen mee gehad.
 
 ![-screenshots week 3-](images/week3_screenshots.png)
 
-### Agenda voor meeting
-
--samen met je groepje opstellen-
-
-### Verslag van meeting
-
-**Feedback Bas**
-Bas vond dat ik goed op weg was en dat het een uitdaging is om Discord na te maken.
+Volgens Bas ben ik goed op weg en hij noemde het een uitdaging om Discord na te maken.
 Ik heb uitgelegd dat ik de mobiele app namaak, omdat de mobiele website niet goed werkt op mobiel. Verder moet ik opnieuw kijken naar de semantiek van mijn website, aangezien Discord een ongebruikelijk lay-out heeft. Ook zou ik bepaalde buttons kunnen vervangen met linkjes en die kunnen stylen als buttons. Discord Mobile is opgedeeld in tabjes, dus het wordt uitvogelen hoe ik dat ga doen en hoe ik dat responsive maak. 
 
 
