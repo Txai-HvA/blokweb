@@ -445,9 +445,7 @@ main>ul>li>div>p>span {
 
 /* Chatbox */
 
-main>div:nth-of-type(2) {
-    visibility: hidden;
-}
+main>div:nth-of-type(2) {}
 
 main>div:nth-of-type(2)>input {
     height: 40px;
