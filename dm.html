@@ -16,10 +16,8 @@
     <!-- Server List -->
     <nav>
         <div>
-            <a href="dm.html"><img src="./images/DM.png" alt=""></a>
+            <a href="dm.html" class="dm-button-selected"><img src="./images/DM.png" alt=""></a>
             <hr>
-
-
             <div>
                 <button></button>
                 <ul>
@@ -52,22 +50,27 @@
         </div>
 
 
-        <!-- Channel list -->
-        <div>
+        <!-- User list -->
+        <div class="dm-user-list">
             <div>
-                <h2>Server 1</h2>
+                <h2>Direct Messages</h2>
                 <button></button>
             </div>
-            <button>Invite Members</button>
-            <div><button>v Text channels</button><button>+</button></div>
+            <input type="text" placeholder="Find or start a conversation">
+
             <ul>
-                <li><a>#general</a></li>
-                <li><a>#memes-and-spam</a></li>
-                <li><a>#bot-commands</a></li>
-            </ul>
-            <ul>
-                <li><a>General</a></li>
-                <li><a>AFK</a></li>
+                <li class="selectedDM">
+                    <a href="">
+                        <img src="./images/server_1.png" alt="">
+                        <p>Marlow</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="./images/server_1.png" alt="">
+                        <p>Milan</p>
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -86,31 +89,27 @@
 
     <!-- Chat -->
     <main>
-        <div>
+        <div class="dm-user-buttons">
             <button href="#"></button>
-            <h3>#general</h3>
-            <button></button>
-            <button></button>
+            <h3>@Marlow</h3>
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
         <ul>
             <li>
                 <div>
                     <img src="./images/server_1.png" alt="">
-                    <p>Txai <span>Today at 16:53</span></p>
+                    <p>Txai <span>Today at 17:23</span></p>
                 </div>
                 <p>Hello world</p>
             </li>
             <li>
                 <div>
                     <img src="./images/server_2.png" alt="">
-                    <p>Marlow <span>Today at 16:54</span></p>
-                </div>
-                <p>Hello world</p>
-            </li>
-            <li>
-                <div>
-                    <img src="./images/server_1.png" alt="">
-                    <p>Milan <span>Today at 16:57</span></p>
+                    <p>Marlow <span>Today at 17:24</span></p>
                 </div>
                 <p>Hello world</p>
             </li>
@@ -118,24 +117,28 @@
         <div>
             <button></button>
             <button></button>
-            <input type="text" placeholder="Message #general">
+            <input type="text" placeholder="Message @Marlow">
             <button></button>
         </div>
     </main>
 
     <!-- Member list -->
     <section>
-        <h3>#general</h3>
-        <ul>
-            <li><button></button>Search</li>
-            <li><button></button>Pins</li>
+
+        <div class="dm-title">
+            <h3>@ Marlow</h3>
+            <button></button>
+        </div>
+        <ul class="dm-member-buttons">
+            <li><button></button>Call</li>
+            <li><button></button>Video</li>
             <li><button></button>Notifications</li>
-            <li><button></button>Settings</li>
+            <li><button></button>Search</li>
         </ul>
         <a>
-            <img src="" alt=""> Invite Members
+            <img src="" alt=""> Create Group DM
         </a>
-        <h4>The Warriors - 3</h4>
+        <h4>Members - 2</h4>
         <ul>
             <li>
                 <img src="./images/server_1.png" alt="">
@@ -143,24 +146,7 @@
             </li>
             <li>
                 <img src="./images/server_1.png" alt="">
-                <p>Milan</p>
-            </li>
-            <li>
-                <img src="./images/server_1.png" alt="">
                 <p>Txai</p>
-            </li>
-        </ul>
-        <h4>Bots - 2</h4>
-        <ul>
-            <li>
-                <img src="./images/server_1.png" alt="">
-                <p>Rythm</p>
-            </li>
-            <li>
-                <img src="./images/server_1.png" alt="">
-                <p>
-                    Hydra
-                </p>
             </li>
         </ul>
     </section>
