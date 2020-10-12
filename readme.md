@@ -26,7 +26,10 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+![-screenshots week 6-](images/week6_screenshots.png)
+Bas adviseerde mij om te scrollen naar een element inplaats van de scroll in viewport.
+Deze komende weken moet de website responsive maken en wat kleine details toevoegen en aanpassen.
+
 
 
 
