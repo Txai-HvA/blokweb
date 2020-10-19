@@ -8,7 +8,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
+1. https://www.w3schools.com/jsref/met_win_scrollto.asp
 2. -bron 2-
 3. -...-
 
@@ -16,7 +16,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+Ik heb de website responsive gemaakt, hover/active/focus states toegevoegt en een hoop kleine aanpassingen. Het responsive maken was best lastig. Ik heb hiervoor grid gebruikt.
 
 **Screenshot(s):**
 
@@ -28,7 +28,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ![-screenshots week 6-](images/week6_screenshots.png)
 Bas adviseerde mij om te scrollen naar een element inplaats van te scrollen met viewport.
-Deze komende weken moet de website responsive maken en wat kleine details toevoegen en aanpassen.
+De komende weken moet ik de website responsive maken en wat kleine details toevoegen en aanpassen.
 
 
 

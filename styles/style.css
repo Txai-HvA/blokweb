@@ -11,10 +11,11 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100%;
+    height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     color: #fff;
     background-color: #202225;
+    overflow-y: hidden;
 }
 
 a {
@@ -30,7 +31,7 @@ ul {
 
 nav {
     /* Server List, Channel List & Settings*/
-    width: 19.5em;
+    width: 312px;
     display: flex;
     background-color: #202225;
 }
@@ -38,7 +39,7 @@ nav {
 nav div:nth-of-type(1) {
     /* Server List container */
     width: 72px;
-    flex-direction: column;
+    z-index: 1;
 }
 
 nav div:nth-of-type(1)>a:nth-of-type(1)>img {
@@ -47,36 +48,55 @@ nav div:nth-of-type(1)>a:nth-of-type(1)>img {
     max-width: 48px;
     max-height: 48px;
     border-radius: 100%;
-    margin-top: 1em;
-    margin-left: 0.8em;
+    margin-top: 16px;
+    margin-left: 12.8px;
 }
 
 .dm-button-selected>img {
     /* DM Button on DM Page */
     background-color: #7289DA !important;
+    border-radius: 40% !important;
+}
+
+nav div:nth-of-type(1)>a:nth-of-type(1):hover>img {
+    /* DM Button Hover State*/
+    background-color: #7289DA !important;
+    border-radius: 40%;
+    transition: 0.1s;
+}
+
+nav div:nth-of-type(1)>a:nth-of-type(1):active>img {
+    /* DM Button Active State*/
+    background-color: #7289DA !important;
+}
+
+nav div:nth-of-type(1)>a:nth-of-type(1):focus>img {
+    /* DM Button Focus State*/
+    background-color: #ff0000 !important;
+    border-radius: 40%;
+    outline: none;
 }
 
 nav div:nth-of-type(1)>hr {
     /* hr between DM button and Server List*/
     width: 36px;
     color: #2D2F31;
-    margin-bottom: 0.8em;
+    margin-bottom: 12.8px;
 }
 
 nav div:nth-of-type(1)>ul {
     /* Server Icons ul*/
-    margin-left: -1.7em;
-    margin-top: 0;
+    margin-left: -27.2px;
 }
 
 nav div:nth-of-type(1)>div:nth-of-type(1) {
     /* Server Folder container*/
     background-color: #36393F;
-    border-radius: 1.2em 1.2em 2em 2em;
+    border-radius: 19.2px 19.2px 32px 32px;
     width: 48px;
-    margin-left: 0.9em;
-    height: 10em;
-    margin-bottom: 0.7em;
+    margin-left: 14.4px;
+    height: 160px;
+    margin-bottom: 11.2px;
 }
 
 nav div:nth-of-type(1)>div:nth-of-type(1)>button {
@@ -87,10 +107,68 @@ nav div:nth-of-type(1)>div:nth-of-type(1)>button {
     background-color: #36393f;
 }
 
-nav div:nth-of-type(1)>div>ul>li>a>img {
-    /*Server Icons in Server Folder */
-    margin-left: -0.8em;
-    margin-top: 0.2em;
+nav div:nth-of-type(1)>div:nth-of-type(1)>button:hover {
+    /* Server Folder Icon Hover State*/
+    background-color: #2e6f4d;
+}
+
+nav div:nth-of-type(1)>div:nth-of-type(1)>button:active {
+    /* Server Folder Icon Active State*/
+    background-color: #2e6f4d;
+}
+
+nav div:nth-of-type(1)>div:nth-of-type(1)>button:focus {
+    /* Server Folder Icon Focus State */
+    background-color: #ff0000;
+    outline: none;
+}
+
+nav div:nth-of-type(1)>div>ul>li>a {
+    /*Server Icons Link in Server Folder */
+    height: 47px;
+    width: 47px;
+    margin-left: -12.8px;
+    margin-top: 8px;
+    display: block;
+}
+
+nav div:nth-of-type(1)>ul>li>a {
+    /*Server Icons Link in Server Folder */
+    height: 47px;
+    width: 47px;
+    margin-top: 8px;
+    display: block;
+}
+
+nav div:nth-of-type(1)>ul>li>a:hover:before {
+    /* Server Icon Active State*/
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 24px;
+    width: 5px;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+nav div:nth-of-type(1)>ul>li>a:active:before {
+    /* Server Icon Active State*/
+    margin-top: 0px;
+    height: 48px;
+    transition: 0.5s;
+}
+
+nav div:nth-of-type(1)>ul>li>a:active {
+    /* Server Icon Active State*/
+    opacity: 80%;
+}
+
+nav div:nth-of-type(1)>ul>li>a:focus {
+    /* Server Icon Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(1)>ul>li>a>img {
@@ -106,7 +184,7 @@ nav div:nth-of-type(1)>button:nth-of-type(1) {
     background-image: url("../images/add_server.png");
     background-size: cover;
     background-color: #36393F;
-    margin: -0.9em auto 0;
+    margin: -6px auto 0;
     display: flex;
     color: #DCDDDE;
     width: 48px;
@@ -115,9 +193,38 @@ nav div:nth-of-type(1)>button:nth-of-type(1) {
     border: none;
 }
 
+nav div:nth-of-type(1)>button:nth-of-type(1):hover {
+    /* Add-a-server-Button Hover */
+    background-image: url("../images/add_server_hover.png");
+    background-color: #43b581;
+    border-radius: 40%;
+    transition: 0.1s;
+}
+
+nav div:nth-of-type(1)>button:nth-of-type(1):focus {
+    /* Add-a-server-Button Focus */
+    background-color: #ff0000;
+    outline: none;
+}
+
+nav div:nth-of-type(1)>div>button:nth-of-type(1):hover {
+    /* Folder Button Hover State */
+    background-image: url("../images/folder.png");
+    background-color: #24563c;
+    background-color: #42464d;
+    border-radius: 16px;
+    transition: 0.1s;
+}
+
+nav div:nth-of-type(1)>div>button:nth-of-type(1):active {
+    /* Folder Button Active State */
+    background-image: url("../images/folder.png");
+    background-color: #24563c;
+}
+
 nav div:nth-of-type(1)>ul>li {
     /*Distance between li's */
-    margin-top: 0.2em;
+    margin-top: 3.2px;
 }
 
 
@@ -126,12 +233,13 @@ nav div:nth-of-type(1)>ul>li {
 nav div:nth-of-type(2) {
     /* Channel List container */
     background-color: #2F3136;
-    width: 15em;
     /* 240px */
+    width: 240px;
+    /*HIER*/
     color: #8E9297;
     display: flex;
     flex-direction: column;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(1) {
@@ -144,10 +252,16 @@ nav div:nth-of-type(2) div:nth-of-type(1) {
 }
 
 nav div:nth-of-type(2) h2 {
-    /* Server Name */
+    /* Server Name / "Direct Messages" */
     color: #fff;
     font-size: 1em;
-    margin: 1em 0 0 1em;
+    margin: 16px 0 0 16px;
+}
+
+nav div:nth-of-type(2) h2:focus {
+    /* Server Name / "Direct Messages" Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(1) button:nth-of-type(1) {
@@ -160,15 +274,37 @@ nav div:nth-of-type(2) div:nth-of-type(1) button:nth-of-type(1) {
     margin: 0px;
 }
 
+nav div:nth-of-type(2) div:nth-of-type(1) button:nth-of-type(1):focus {
+    /* Server Settings Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
 nav div:nth-of-type(2)>button:nth-of-type(1) {
     /* Invite-Members button*/
     height: 36px;
     margin: 15px;
-    border-radius: 0.4em;
+    border-radius: 6.4px;
     border: none;
     background-color: #4F545C;
     color: #fff;
     font-weight: bold;
+}
+
+nav div:nth-of-type(2)>button:nth-of-type(1):hover {
+    /* Invite-Members button Hover State*/
+    background-color: #797d83;
+}
+
+nav div:nth-of-type(2)>button:nth-of-type(1):active {
+    /* Invite-Members button Active State*/
+    background-color: #797d83;
+}
+
+nav div:nth-of-type(2)>button:nth-of-type(1):focus {
+    /* Invite-Members button Active State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(2) {
@@ -177,6 +313,7 @@ nav div:nth-of-type(2) div:nth-of-type(2) {
     flex-direction: row;
     border-radius: 0;
     height: 36px;
+    width: 100%;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1) {
@@ -188,17 +325,104 @@ nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1) {
     background-color: transparent;
     color: #8E9297;
     font-weight: bold;
-    width: 95%;
-    padding-right: 40%;
+    width: 100%;
+    padding-right: 46%;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1):hover {
+    /* Channel Category Open/Close Button Hover State*/
+    background-color: #393c42;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1):active {
+    /* Channel Category Open/Close Button Active State */
+    background-color: #393c42;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1):focus {
+    /* Channel Category Open/Close Button Focus State */
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(2) {
-    /* Channel Category add-channel-Button*/
+    /* Channel Category add-channel-Button */
     width: 14%;
     color: #8E9297;
-    font-weight: bold;
+    font-size: 1.3em;
     border: none;
     background-color: transparent;
+    position: absolute;
+    margin-left: 194px;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(2):hover {
+    /* Channel Category add-channel-Button Hover State */
+    background-color: #292b2f;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(2):active {
+    /* Channel Category add-channel-Button Active State */
+    background-color: #292b2f;
+}
+
+nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(2):focus {
+    /* Channel Category add-channel-Button Active State */
+    background-color: #ff0000;
+    outline: none;
+}
+
+nav>div:nth-of-type(2)>ul {
+    /* Text Channel List */
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+nav>div:nth-of-type(2)>ul>li {
+    /* Text Channel List Items */
+    padding-left: 0px;
+    margin: 5px 10px;
+}
+
+nav>div:nth-of-type(2)>ul>li>a {
+    /* Text Channel Links */
+    padding: 10px 0 10px 20px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.dm-user-list>ul>li>a {
+    /* DM User List Item. Fixed overlap met Text Channel Links*/
+    padding: 0 0 0 10px !important;
+    display: flex !important;
+}
+
+nav>div:nth-of-type(2)>ul:nth-of-type(1)>li:nth-of-type(1)>a {
+    /* #general (selected channel) */
+    background-color: #42464d;
+    color: #fff;
+}
+
+nav>div:nth-of-type(2)>ul>li>a:hover {
+    /* Hover state Channels */
+    background-color: #393c42;
+}
+
+nav>div:nth-of-type(2)>ul>li>a:active {
+    /* Hover state Channels */
+    background-color: #42464d;
+    color: #fff;
+}
+
+nav>div:nth-of-type(2)>ul>li>a:focus {
+    /* Focus state Channels */
+    background-color: #ff0000;
+    color: #fff;
+    outline: none;
 }
 
 
@@ -209,38 +433,61 @@ nav div:nth-of-type(2) input {
     color: #8E9297;
     background-color: #202225;
     border: none;
-    border-radius: 0.5em;
-    margin: 0 1em;
-    padding: 1em;
+    border-radius: 8px;
+    margin: 0 16px;
+    padding: 16px;
     font-weight: bold;
     background-image: url("../images/search.png");
     background-repeat: no-repeat;
     background-size: 50px 50px;
     font-size: 12px;
-    background-position: 14.4em;
+    background-position: 230.4px;
+}
+
+nav div:nth-of-type(2) input:hover {
+    /* Conversation Search input Hover State*/
+    background-color: #595a5e;
+    color: #fff;
+}
+
+nav div:nth-of-type(2) input:active {
+    /* Conversation Search input Active State*/
+    background-color: #595a5e;
+    color: #fff;
+}
+
+nav div:nth-of-type(2) input:focus {
+    /* Conversation Search input Focus State*/
+    background-color: #ff0000;
+    color: #fff;
+    outline: none;
 }
 
 .dm-user-list>ul {
     /* Conversation ul*/
-    margin-left: -40px;
+    /* margin-left: -40px; */
 }
 
 .dm-user-list>ul>li {
     /* Conversation li*/
-    margin: 1em 0 0 1em;
+    margin: 16px 0 0 16px;
 }
 
 .dm-user-list>ul>li>a>img {
     /* Conversation User Image*/
     width: 40px;
     height: 40px;
-    margin-right: 1em;
+    margin-right: 16px;
+    border-radius: 100%;
+    /* in plaats van links boven bij background-image wordt
+    object-fit cover wordt vanuit het midden gepositioneerd */
+    object-fit: cover;
 }
 
 .dm-user-list>ul>li>a>p {
     /* Conversation User Name*/
     font-weight: bold;
-    margin-top: 0.8em;
+    margin-top: 12.8px;
 }
 
 .dm-user-list>ul>li>a {
@@ -251,7 +498,6 @@ nav div:nth-of-type(2) input {
 
 .dm-user-list>div>button {
     /* Invite-friends-to-message button */
-    background-image: url("../images/invite_dm.png") !important;
     background-size: 40px 40px;
     background-repeat: no-repeat;
     background-position: center;
@@ -260,15 +506,10 @@ nav div:nth-of-type(2) input {
 .selectedDM {
     /* DM selected conversation */
     background-color: #42464D;
-    padding: 10px 0 6px 10px;
-    border-radius: 0.4em;
-    margin-right: 0.5em !important;
-    margin-left: 0.5em !important;
-}
-
-.selectedDM a {
-    /* DM selected conversation Link*/
-    color: #fff !important;
+    padding: 5px 0 0 0;
+    border-radius: 6.4px;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
 }
 
 
@@ -278,7 +519,7 @@ nav div:nth-of-type(3) {
     /* Settings Container */
     position: fixed;
     bottom: 0;
-    /* width: 100%; */
+    width: 100%;
     height: 70px;
     background-color: #18191C;
     z-index: 1;
@@ -292,42 +533,128 @@ nav div:nth-of-type(3)>ul {
     padding: 0;
 }
 
+nav div:nth-of-type(3)>ul>li {
+    /* Settings List Item*/
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
 nav div:nth-of-type(3)>ul>li>button {
     /* Settings Buttons*/
-    height: 100%;
-    background-color: transparent;
-    width: 5.4em;
+    height: 70px;
+    max-height: 70px;
+    max-width: 70px;
+    width: 70px;
     border: none;
+    /*HIER*/
+    background-color: #18191c;
+    background-size: cover;
 }
 
 nav div:nth-of-type(3)>ul>li:nth-of-type(1)>button {
     /* Settings Button 1*/
     background-image: url("../images/settings_knop_1.png");
-    background-size: cover;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(1)>button:hover {
+    /* Settings Button 1 Hover State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(1)>button:active {
+    /* Settings Button 1 Active State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(1)>button:focus {
+    /* Settings Button 1 Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(3)>ul>li:nth-of-type(2)>button {
     /* Settings Button 2*/
     background-image: url("../images/settings_knop_2.png");
-    background-size: cover;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(2)>button:hover {
+    /* Settings Button 2 Hover State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(2)>button:active {
+    /* Settings Button 2 Active State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(2)>button:focus {
+    /* Settings Button 2 Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(3)>ul>li:nth-of-type(3)>button {
     /* Settings Button 3*/
     background-image: url("../images/settings_knop_3.png");
-    background-size: cover;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(3)>button:hover {
+    /* Settings Button 3 Hover State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(3)>button:active {
+    /* Settings Button 3 Active State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(3)>button:focus {
+    /* Settings Button 3 Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(3)>ul>li:nth-of-type(4)>button {
     /* Settings Button 4*/
     background-image: url("../images/settings_knop_4.png");
-    background-size: cover;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(4)>button:hover {
+    /* Settings Button 4 Hover State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(4)>button:active {
+    /* Settings Button 4 Active State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(4)>button:focus {
+    /* Settings Button 4 Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 nav div:nth-of-type(3)>ul>li:nth-of-type(5)>button {
     /* Settings Button 5*/
     background-image: url("../images/settings_knop_5.png");
-    background-size: cover;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(5)>button:hover {
+    /* Settings Button 5 Hover State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(5)>button:Active {
+    /* Settings Button 5 Active State*/
+    background-color: #131416;
+}
+
+nav div:nth-of-type(3)>ul>li:nth-of-type(5)>button:focus {
+    /* Settings Button 5 Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 
@@ -337,41 +664,51 @@ main {
     /* Chat Container*/
     width: 360px;
     background-color: #36393F;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
     margin: 0 10px;
+    position: relative;
 }
 
 main>div:nth-of-type(1) {
     /* Channel Name Container */
     height: 50px;
     background-color: #2F3136;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
     display: flex;
-    position: absolute;
     z-index: 1;
     /*TEMP*/
-    width: 22.5em;
+    width: 360px;
 }
 
 main>div:nth-of-type(1) h3 {
     /* Channel Name / Username */
     font-size: 1em;
+    position: absolute;
+    margin-left: 50px;
+}
+
+main>div:nth-of-type(1) h3:focus {
+    /* Channel Name / Username Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 .dm-user-buttons h3 {
     /* Username style fix*/
-    margin-left: 1em;
+    margin-left: 16px;
 }
 
 .dm-user-buttons>div {
     /* DM User Button Container */
-    margin-left: 4em;
+    margin-left: 64px;
 }
 
 .dm-user-buttons>div>button:nth-of-type(1) {
     /* DM User Call Button*/
     background-image: url("../images/call.png") !important;
     background-position: center;
+    right: 0;
+    margin-right: 100px;
 }
 
 .dm-user-buttons>div>button:nth-of-type(2) {
@@ -383,7 +720,7 @@ main>div:nth-of-type(1) h3 {
 
 .dm-user-buttons>div>button:nth-of-type(3) {
     /* DM User Member Button*/
-    border-radius: 0 1em 0 0;
+    border-radius: 0 16px 0 0;
     border: none;
     width: 50px;
     background-image: url("../images/friends.png");
@@ -392,36 +729,85 @@ main>div:nth-of-type(1) h3 {
     background-color: #2F3136;
 }
 
+main>div:nth-of-type(1) button {
+    /* Chat Title Buttons */
+    border-radius: 100% !important;
+}
+
 main>div:nth-of-type(1) button:nth-of-type(1) {
     /* Hamburger Menu Button */
-    border-radius: 1em 0 0 0;
+    border-radius: 16px 0 0 0;
     border: none;
     width: 50px;
     height: 50px;
     background-color: #2F3136;
     background-image: url("../images/hamburger.png");
     background-size: cover;
+    position: absolute;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(1):focus {
+    /* Hamburger Menu Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>div:nth-of-type(1) button:nth-of-type(2) {
-    /* Channel Search Button*/
+    /* Channel Search Button */
     border: none;
     width: 50px;
     height: 50px;
     background-color: #2F3136;
     background-image: url("../images/search.png");
     background-size: cover;
+    right: 0;
+    position: absolute;
+    margin-right: 50px;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(2):hover {
+    /* Channel Search Button Hover State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(2):active {
+    /* Channel Search Button Active State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(2):focus {
+    /* Channel Search Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>div:nth-of-type(1) button:nth-of-type(3) {
     /* Channel Members Button*/
-    border-radius: 0 1em 0 0;
+    border-radius: 0 16px 0 0;
     border: none;
     width: 50px;
     height: 50px;
     background-color: #2F3136;
     background-image: url("../images/friends.png");
     background-size: cover;
+    right: 0;
+    position: absolute;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(3):hover {
+    /* Channel Member Button Hover State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(3):active {
+    /* Channel Member Button Active State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(1) button:nth-of-type(3):focus {
+    /* Channel Member Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>div:nth-of-type(2) {
@@ -429,24 +815,35 @@ main>div:nth-of-type(2) {
     position: absolute;
     bottom: 0;
     display: flex;
-    margin-bottom: 10px;
     z-index: 0;
     /*TEMP*/
-    width: 22.5em;
-    background-color: red;
-    padding: 0.4em 0;
+    width: 360px;
+    background-color: #36393F;
+    padding: 6.4px 0;
 }
 
 main>ul {
     /* Chat Messages */
-    margin-left: -1.8em;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 4em;
+    /*HIER*/
+    min-width: 100%;
     position: absolute;
     z-index: 0;
+    height: 90%;
     overflow-y: scroll;
+    margin: 0 0 0 -40px;
+}
+
+main>ul>li {
+    /* User List Item*/
+    padding-left: 12px;
+    padding-top: 1px;
+    padding-bottom: 0px;
     /*HIER*/
+}
+
+main>ul>li:hover {
+    /* User List Item */
+    background-color: #2f3237;
 }
 
 main>ul>li>div {
@@ -456,16 +853,38 @@ main>ul>li>div {
 
 main>ul>li>p {
     /* User Messages */
-    margin-left: 4.1em;
-    margin-top: -1em;
+    margin-left: 65.6px;
+    margin-top: -16px;
+}
+
+main>ul>li>p:focus {
+    /* User Message Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>ul>li>div>p {
     /* Username */
-    margin-left: 1em;
+    margin-left: 16px;
     margin-top: 4px;
     color: #fdb927;
     font-weight: bold;
+}
+
+main>ul>li>div>p>a:hover {
+    /* Username Link Hover State*/
+    text-decoration: underline;
+}
+
+main>ul>li>div>p>a:active {
+    /* Username Link Active State*/
+    text-decoration: underline;
+}
+
+main>ul>li>div>p>a:focus {
+    /* Username Link Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>ul>li>div>img {
@@ -473,6 +892,26 @@ main>ul>li>div>img {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+    /* in plaats van links boven bij background-image wordt
+    object-fit cover wordt vanuit het midden gepositioneerd */
+    object-fit: cover;
+}
+
+main>ul>li>div>img:hover {
+    /* User Image Focus State */
+    background-color: #1d2024;
+    box-shadow: 0 0 10px #1d2024;
+}
+
+main>ul>li>div>img:active {
+    /* User Image Focus State */
+    box-shadow: 0 0 10px #1d2024;
+}
+
+main>ul>li>div>img:focus {
+    /* User Image Focus State */
+    background-color: #ff0000;
+    outline: none;
 }
 
 main>ul>li>div>p>span {
@@ -483,16 +922,41 @@ main>ul>li>div>p>span {
     word-spacing: -1px;
 }
 
+main>ul>li>div>p>span:focus {
+    /* Message Time Focus State */
+    background-color: #ff0000;
+    outline: none;
+}
+
 main>div:nth-of-type(2)>input {
     /* Chat Input */
     height: 40px;
-    border-radius: 2em;
+    border-radius: 32px;
     border: none;
     padding: 0 16px;
     margin-left: 10px;
     width: 240px;
     background-color: #292B2F;
     color: #DCDDDE;
+}
+
+main>div:nth-of-type(2)>input:hover {
+    /* Chat Input Hover State */
+    background-color: #595a5e;
+    color: #fff
+}
+
+main>div:nth-of-type(2)>input:active {
+    /* Chat Input Active State */
+    background-color: #595a5e;
+    color: #fff
+}
+
+main>div:nth-of-type(2)>input:focus {
+    /* Chat Input Focus State */
+    background-color: #ff0000;
+    color: #fff;
+    outline: none;
 }
 
 main>div:nth-of-type(2)>button {
@@ -511,41 +975,96 @@ main>div:nth-of-type(2)>button:nth-of-type(1) {
     background-size: cover;
 }
 
+main>div:nth-of-type(2)>button:nth-of-type(1):hover {
+    /* Chat Camera Button Hover State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(1):active {
+    /* Chat Camera Button Active State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(1):focus {
+    /* Chat Camera Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
 main>div:nth-of-type(2)>button:nth-of-type(2) {
     /* Chat Gallery Button */
     background-image: url("../images/gallery.png");
     background-size: cover;
 }
 
+main>div:nth-of-type(2)>button:nth-of-type(2):hover {
+    /* Chat Gallery Button Hover State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(2):active {
+    /* Chat Gallery Button Active State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(2):focus {
+    /* Chat Gallery Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
 main>div:nth-of-type(2)>button:nth-of-type(3) {
     /* Chat Emote Button */
     background-image: url("../images/emotes.png");
     background-size: cover;
+    background-color: transparent;
     margin-left: -40px !important;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(3):hover {
+    /* Chat Emote Button Hover State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(3):active {
+    /* Chat Emote Button Active State*/
+    background-color: #595a5e;
+}
+
+main>div:nth-of-type(2)>button:nth-of-type(3):focus {
+    /* Chat Emote Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 
 /* Members List */
 
-section:nth-of-type(1) {
+section {
     /* Member List Container */
     background-color: #36393F;
-    width: 19em;
+    width: 304px;
     display: flex;
     flex-direction: column;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
-section:nth-of-type(1)>h3 {
+section>h3 {
     /* Member List - Channel Name*/
     background-color: #2F3136;
     width: 100%;
     padding: 20px;
-    border-radius: 1em 1em 0 0;
+    border-radius: 16px 16px 0 0;
     margin-top: -1px;
 }
 
-section:nth-of-type(1)>ul:nth-of-type(1) {
+section>h3:focus {
+    /* Member List - Channel Name Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul:nth-of-type(1) {
     /* Member List Options List*/
     display: flex;
     background-color: #2F3136;
@@ -555,7 +1074,7 @@ section:nth-of-type(1)>ul:nth-of-type(1) {
     padding-bottom: 12px;
 }
 
-section:nth-of-type(1)>ul:nth-of-type(1)>li {
+section>ul:nth-of-type(1)>li {
     /* Member List Options*/
     color: #B8BABD;
     font-size: 13px;
@@ -563,7 +1082,42 @@ section:nth-of-type(1)>ul:nth-of-type(1)>li {
     font-weight: bold;
 }
 
-section:nth-of-type(1)>ul>li>button {
+section>ul:nth-of-type(2),
+section>ul:nth-of-type(3) {
+    /* Member Lists*/
+    padding-left: 0;
+}
+
+section>ul:nth-of-type(2)>li>a,
+section>ul:nth-of-type(3)>li>a {
+    /* Member Lists Items*/
+    padding-left: 40px;
+    color: #fdb927;
+    font-weight: bold;
+}
+
+section>ul:nth-of-type(2)>li>a:hover,
+section>ul:nth-of-type(3)>li>a:hover {
+    /* Member Lists Items Focus State*/
+    background-color: #2f3237;
+}
+
+section>ul:nth-of-type(2)>li>a:focus,
+section>ul:nth-of-type(3)>li>a:focus {
+    /* Member Lists Items Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul:nth-of-type(2)>li>a>p,
+section>ul:nth-of-type(3)>li>a>p {
+    /* Member Lists Item Name*/
+    padding-left: 20px;
+    color: #fdb927;
+    font-weight: bold;
+}
+
+section>ul>li>button {
     /* Member List Options Buttons*/
     width: 70px;
     height: 50px;
@@ -571,70 +1125,142 @@ section:nth-of-type(1)>ul>li>button {
     background-color: #2F3136;
 }
 
-section:nth-of-type(1)>ul:nth-of-type(2)>li>img,
-section:nth-of-type(1)>ul:nth-of-type(3)>li>img {
+section>ul:nth-of-type(2)>li>a>img,
+section>ul:nth-of-type(3)>li>a>img {
     /* Member List - Role 1 & 2 - Profile Image*/
     width: 50px;
     height: 50px;
+    border-radius: 100%;
+    /* in plaats van links boven bij background-image wordt
+    object-fit cover wordt vanuit het midden gepositioneerd */
+    object-fit: cover;
 }
 
-section:nth-of-type(1)>ul>li:nth-of-type(1)>button {
+section>ul>li:nth-of-type(1)>button {
     /* Member List Search Button*/
     background-image: url("../images/Search2.png");
     background-size: cover;
 }
 
-section:nth-of-type(1)>ul>li:nth-of-type(2)>button {
-    /* Member List Pins Button*/
-    background-image: url("../images/Pins.png");
-    background-size: cover;
+section>ul>li:nth-of-type(1)>button:hover {
+    /* Member List Search Button Hover State*/
+    background-color: #595a5e;
 }
 
-section:nth-of-type(1)>ul>li:nth-of-type(3)>button {
+section>ul>li:nth-of-type(1)>button:active {
+    /* Member List Search Button Active State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(1)>button:focus {
+    /* Member List Search Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul>li:nth-of-type(2)>button {
+    /* Member List Pins Button*/
+    background-image: url("../images/Pins.png");
+}
+
+section>ul>li:nth-of-type(2)>button:hover {
+    /* Member List Pins Button Hover State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(2)>button:active {
+    /* Member List Pins Button Active State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(2)>button:focus {
+    /* Member List Pins Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul>li:nth-of-type(3)>button {
     /* Member List Notifications Button*/
     background-image: url("../images/Notifications.png");
     background-size: cover;
 }
 
-section:nth-of-type(1)>ul>li:nth-of-type(4)>button {
+section>ul>li:nth-of-type(3)>button:hover {
+    /* Member List Notifications Button Hover State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(3)>button:active {
+    /* Member List Notifications Button Active State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(3)>button:focus {
+    /* Member List Notifications Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul>li:nth-of-type(4)>button {
     /* Member List Settings Button*/
     background-image: url("../images/Settings.png");
     background-size: cover;
 }
 
-section:nth-of-type(1)>ul:nth-of-type(2)>li,
-section:nth-of-type(1)>ul:nth-of-type(3)>li {
+section>ul>li:nth-of-type(4)>button:hover {
+    /* Member List Settings Button Hover State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(4)>button:active {
+    /* Member List Settings Button Active State*/
+    background-color: #595a5e;
+}
+
+section>ul>li:nth-of-type(4)>button:focus {
+    /* Member List Settings Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>ul:nth-of-type(2)>li>a,
+section>ul:nth-of-type(3)>li>a {
     /* Member List User */
     display: flex;
-    margin-left: -1em;
-    margin-bottom: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-section:nth-of-type(1)>ul:nth-of-type(2)>li>p,
-section:nth-of-type(1)>ul:nth-of-type(3)>li>p {
+section>ul:nth-of-type(2)>li>p>a,
+section>ul:nth-of-type(3)>li>p>a {
     /* Member List Username */
-    margin-left: 1em;
+    margin-left: 24px;
 }
 
-section:nth-of-type(1)>h4 {
+section>h4 {
     /* Member List Role Names */
     color: #777B83;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8em;
-    margin-left: 2em;
-    margin-bottom: 0.5em;
-    margin-top: -1em;
+    margin: 0 0 0 32px;
 }
 
-section:nth-of-type(1)>a {
+section>h4:focus {
+    /* Member List Role Names Focus State */
+    background-color: #ff0000;
+    outline: none;
+}
+
+section>a {
     /* Member List Invite Members Button*/
     display: flex;
     align-items: center;
-    margin-bottom: 3em;
+    margin-bottom: 38px;
+    padding: 10px 0;
 }
 
-section:nth-of-type(1)>a>img {
+section>a>img {
     /* Member List Invite Members Button Image*/
     background-image: url("../images/Invite.png");
     background-size: cover;
@@ -644,6 +1270,19 @@ section:nth-of-type(1)>a>img {
     background-color: #2F3136;
     border-radius: 100%;
     margin: 0 25px;
+}
+
+section>a:hover {
+    background-color: #2f3237;
+}
+
+section>a:active {
+    background-color: #2f3237;
+}
+
+section>a:focus {
+    background-color: #ff0000;
+    outline: none;
 }
 
 
@@ -659,7 +1298,7 @@ section:nth-of-type(1)>a>img {
     background-color: #2F3136;
     width: 100%;
     padding: 20px;
-    border-radius: 1em 0 0 0;
+    border-radius: 16px 0 0 0;
     margin-top: -1px;
 }
 
@@ -670,7 +1309,13 @@ section:nth-of-type(1)>a>img {
     border: none;
     width: 50px;
     background-image: url("../images/server_settings.png");
-    border-radius: 0 1em 0 0;
+    border-radius: 0 16px 0 0;
+}
+
+.dm-title button:focus {
+    /* DM Name Button Focus State*/
+    background-color: #ff0000;
+    outline: none;
 }
 
 .dm-member-buttons li:nth-of-type(1) button {
@@ -693,6 +1338,43 @@ section:nth-of-type(1)>a>img {
     background-image: url("../images/search2.png") !important;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    nav div:nth-of-type(3) {
+        /* Settings Container */
+        width: 312px;
+    }
+    main>div:nth-of-type(1)>button:nth-of-type(1) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        display: grid;
+        /* max-width: 100vw; */
+        overflow-x: hidden;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+    nav div:nth-of-type(3) {
+        /* Settings Container */
+        width: 312px;
+    }
+    main {
+        /* Chat Container*/
+        width: 98.6%;
+        grid-column: 2;
+    }
+    main>div:nth-of-type(1),
+    main>div:nth-of-type(2) {
+        /* Channel Name Container & Chatbox Container */
+        width: 100%;
+    }
+    main>div:nth-of-type(2)>input {
+        /* Chat Input */
+        width: 85%;
+    }
+}
+
 
 /*Js*/
 
@@ -708,14 +1390,11 @@ section:nth-of-type(1)>a>img {
     transform: translate(0, 0);
 }
 
-.scrollLeft {
-    /* Scroll to Chat and hide nav */
-    transition: 0.5s;
-    transform: translate(-45vh, 0);
+.hide {
+    display: none;
 }
 
-.scrollRight {
-    /* Scroll to nav and hide Chat */
-    transition: 0.5s;
-    transform: translate(0vh, 0);
+.closedFolder {
+    max-height: 47px;
+    border-radius: 19.2px;
 }
