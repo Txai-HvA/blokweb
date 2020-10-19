@@ -16,7 +16,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Eindgesprek (week 7/8)
 
-Ik heb de website responsive gemaakt, hover/active/focus states toegevoegt en een hoop kleine aanpassingen. Het responsive maken was best lastig. Ik heb hiervoor grid gebruikt.
+Ik heb de website responsive gemaakt, hover/active/focus states toegevoegt en een hoop kleine aanpassingen. Het responsive maken was best lastig. Ik heb hiervoor grid gebruikt. Ik heb alleen problemen gehad met de focus states. Die werden geactiveerd zodra de active state zou moeten verschijnen.
 
 **Screenshot(s):**
 

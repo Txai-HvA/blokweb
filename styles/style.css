@@ -314,6 +314,7 @@ nav div:nth-of-type(2) div:nth-of-type(2) {
     border-radius: 0;
     height: 36px;
     width: 100%;
+    position: relative;
 }
 
 nav div:nth-of-type(2) div:nth-of-type(2) button:nth-of-type(1) {
@@ -461,11 +462,6 @@ nav div:nth-of-type(2) input:focus {
     background-color: #ff0000;
     color: #fff;
     outline: none;
-}
-
-.dm-user-list>ul {
-    /* Conversation ul*/
-    /* margin-left: -40px; */
 }
 
 .dm-user-list>ul>li {
@@ -828,7 +824,7 @@ main>ul {
     min-width: 100%;
     position: absolute;
     z-index: 0;
-    height: 90%;
+    height: 86%;
     overflow-y: scroll;
     margin: 0 0 0 -40px;
 }
@@ -1047,6 +1043,7 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 16px 16px 0 0;
+    height: 100%;
 }
 
 section>h3 {
@@ -1344,6 +1341,7 @@ section>a:focus {
         width: 312px;
     }
     main>div:nth-of-type(1)>button:nth-of-type(1) {
+        /* Verbergt Hamburger Menu*/
         display: none;
     }
 }
@@ -1358,6 +1356,10 @@ section>a:focus {
     nav div:nth-of-type(3) {
         /* Settings Container */
         width: 312px;
+    }
+    main>div:nth-of-type(1)>button:nth-of-type(1) {
+        /* Verbergt Hamburger Menu op Desktop*/
+        display: none;
     }
     main {
         /* Chat Container*/

@@ -21,7 +21,7 @@ var discordButton = document.querySelector("nav div:nth-of-type(3) > ul > li:nth
 window.onload = function() {
     // Zodra de pagina laad, start de chat vanaf het eerste bericht onderaan 
     // xpos, ypos
-    chatMessages.scrollTo(0, 1000);
+    chatMessages.scrollTo(0, 2000);
 }
 
 function toggleMenu() {
