@@ -20,7 +20,7 @@ Ik heb de website responsive gemaakt, hover/active/focus states toegevoegt en ee
 
 **Screenshot(s):**
 
--screenshot(s) van je eindresultaat-
+![-screenshots week 6-](images/week7_screenshots.png)
 
 
 
